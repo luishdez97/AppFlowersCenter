@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E00028</color>
+    <color name="colorPrimaryDark">#E00028</color>
+    <color name="colorAccent">@android:color/white</color>
+
+
+    <color name='color_Botones'>#0870B8</color>
+    <color name='colorBottom'>#202020</color>
+    <color name="colorIconBottom">#B8B8B8</color>
+    <color name="colorHint">#202020</color>
+
+
+</resources>

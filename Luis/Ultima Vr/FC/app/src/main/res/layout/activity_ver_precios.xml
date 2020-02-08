@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ver_Precios">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_regresar"
+            android:layout_width="122dp"
+            android:layout_height="38dp"
+            android:background="@android:color/white"
+            android:drawableLeft="@android:drawable/ic_menu_revert"
+            android:onClick="Regresar"
+            android:text="Regresar"
+            android:textColor="@color/color_Botones" />
+
+        <Button
+            android:id="@+id/btnscan"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_rounded"
+            android:fontFamily="monospace"
+            android:onClick="Escanear"
+            android:text="SCANEAR CODIGO DE BARRAS"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/codprod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/colorHint"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="Digite el codigo"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/colorHint" />
+
+        <Button
+            android:id="@+id/btnver"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_rounded"
+            android:fontFamily="serif"
+            android:onClick="BuscarPrecio"
+            android:text="CONSULTAR"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/producto"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/colorHint"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_rounded"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="PRECIO"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/precio"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/colorHint"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/colorBottom"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

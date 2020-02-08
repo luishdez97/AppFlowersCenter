@@ -1,0 +1,38 @@
+    public void LlenadoLuis()
+    {
+        String nombre_bod;
+        combo=(Spinner)findViewById(R.id.cmbbodegas);
+
+        try {
+            ConexionBD();
+            PreparedStatement pst = ConexionBD().prepareStatement("SELECT * FROM BODEGAS WHERE DESCRIPCION=? ");
+            ResultSet rs = pst.executeQuery();
+            ArrayList<String> data = new ArrayList<String>();
+            while (rs.next()) {
+                nombre_bod = rs.getString("DESCRIPCION");
+                data.add(nombre_bod);
+            }
+            String[] array = data.toArray(new String[0]);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+            combo.setAdapter(adapter);
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        combo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+
+                String name = combo.getSelectedItem().toString();
+                Toast.makeText(Consulta_Inventario.this, name, Toast.LENGTH_SHORT)
+                        .show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
